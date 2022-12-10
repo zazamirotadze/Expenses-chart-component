@@ -1,0 +1,57 @@
+.chart-div{
+    width: 100%;
+    background-color: $Verypaleorange;
+    border-radius: 15px;
+    margin-top: 30px;
+    &-total-div{
+        display: flex;
+        justify-content: space-between;
+        padding:  25px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid $Mediumbrown;
+            width: 92%;
+            top: 0;
+        }
+        & p {
+          font-size: 15px;
+        }
+        &-price-div{
+            & p {
+                color: $Mediumbrown;
+            }
+            & h2{
+                font-size: 40px;
+                color: $Darkbrown;
+            }
+        }
+        &-percent-div{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            & p:nth-child(1) {
+                color: $Darkbrown;
+                font-weight: bold;
+            }
+            & p:nth-child(2) {
+                color: $Mediumbrown;
+            }
+        }
+    }
+    &-figures-div{
+        padding:  25px;
+        & h3{
+            color: $Darkbrown;
+            font-size: 30px;
+        }
+        &-rectangles-div{
+            display: flex;
+            justify-content: space-between;
+            height: 230px;
+            margin-top: 50px;
+        }
+    }
+}

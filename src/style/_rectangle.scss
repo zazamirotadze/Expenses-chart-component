@@ -1,0 +1,58 @@
+.chart-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 11%;
+    
+    &-amount{
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-150%);
+        background-color: $Darkbrown;
+        color: $Verypaleorange;
+        border-radius: 5px;
+        width: 134%;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 2;
+        @media only screen and (max-width: 500px) {
+            width: 150%;
+        }
+        @media only screen and (max-width: 400px) {
+            width: 200%;
+        }
+        @media only screen and (max-width: 300px) {
+            width: 250%;
+        }
+    }
+    &-rectangle, &-highest{
+        width: 100%;
+        border-radius: 5px;
+        position: relative;
+        cursor: pointer;
+        &:hover, &:active{
+            .chart-part-amount{
+                display: flex;
+            }
+        }
+    }
+    &-rectangle{
+        background-color: $Softred;
+        &:hover, &:active{
+         background-color: lighten($color: $Softred, $amount: 10) ;   
+        }
+    }
+    &-highest{
+        background-color: $Cyan;
+        &:hover, &:active{
+            background-color: lighten($color: $Cyan, $amount: 10) ;   
+        }
+    }
+    &-day{
+        color: $Mediumbrown;
+    }
+}
